@@ -4,7 +4,7 @@ RT-DETRv2-S/R18VD과 YOLOv8m를 YouTube-VIS detection 변환 데이터에서 비
 
 ## 실험 개요
 
-- 비교 모델: `YOLOv8m`, `RT-DETRv2-S/R18VD`
+- 비교 모델: `RT-DETRv2-S/R18VD`, `YOLOv8m`
 - 데이터셋: YouTube-VIS 2021 bbox 변환
 - 산출물 위치: `outputs/`
 - 공식 repo:
