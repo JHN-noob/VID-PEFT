@@ -128,6 +128,7 @@ publication
 ## 결론
 
 본 실험에서 temporal PEFT는 두 detector 모두에서 명확하고 안정적인 성능 향상을 만들지 못했습니다. YOLOv8m은 temporal PEFT가 head-only보다 아주 조금 높았지만 차이가 작고 clip/budget 변화에도 거의 반응하지 않았습니다. RT-DETRv2-S/R18VD는 best checkpoint 기준으로 temporal PEFT 반응이 보였지만 epoch가 진행되며 final AP가 크게 하락했습니다.
+
 따라서 현재 결과는 frame-level detection loss만으로는 temporal adaptation을 안정적인 detection 성능 향상으로 정렬하기 어렵다고 해석할 수 있습니다. 후속 실험은 PEFT 규모 확대와 temporal consistency/teacher-student loss 추가를 수행할 예정입니다.
 
 ## Main 결과
