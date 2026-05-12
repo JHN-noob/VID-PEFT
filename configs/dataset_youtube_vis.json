@@ -1,0 +1,42 @@
+{
+  "dataset": {
+    "name": "YouTube-VIS",
+    "splits": ["pilot_train", "pilot_dev", "train", "val"],
+    "num_classes": 40,
+    "task_source": "video instance segmentation",
+    "target_task": "video object detection via annotation bbox conversion",
+    "license_scope": "non-commercial research"
+  },
+  "paths": {
+    "youtube_vis_root": "data/VIS2021",
+    "annotations_root": "data/VIS2021",
+    "videos_root": "data/VIS2021/train/JPEGImages",
+    "videos_roots": {
+      "train": "data/VIS2021/train/JPEGImages",
+      "val": "data/VIS2021/valid/JPEGImages"
+    },
+    "manifest_path": "outputs/manifests/youtube_vis.jsonl",
+    "annotation_files": {
+      "train": "data/VIS2021/train/instances.json",
+      "val": "data/VIS2021/validatio_gt.json"
+    }
+  },
+  "bbox_conversion": {
+    "source_field": "annotations[].bboxes[frame_index]",
+    "source_format": "xywh",
+    "target_format": "xyxy",
+    "mask_rasterization_required": false
+  },
+  "split_policy": {
+    "unit": "video",
+    "pilot_train_ratio": 0.05,
+    "pilot_dev_ratio": 0.01,
+    "main_train_uses_all_train_videos": true,
+    "final_eval_split": "val"
+  },
+  "head_replacement": {
+    "enabled_for_all_matrix_conditions": true,
+    "train_new_head": true,
+    "num_classes": 40
+  }
+}

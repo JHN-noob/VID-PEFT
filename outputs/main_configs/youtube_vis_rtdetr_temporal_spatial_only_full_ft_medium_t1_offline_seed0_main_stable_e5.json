@@ -1,0 +1,63 @@
+{
+  "model_family": "rtdetr_temporal",
+  "dataset": {
+    "name": "youtube_vis",
+    "num_classes": 40
+  },
+  "tuning_mode": "spatial_only_full_ft",
+  "budget": "medium",
+  "seed": 0,
+  "clip": {
+    "length": 1,
+    "causal": false,
+    "target": "center"
+  },
+  "paths": {
+    "youtube_vis_root": "data/VIS2021",
+    "outputs_root": "outputs",
+    "rtdetr_repo": "third_party/RT-DETR"
+  },
+  "head_replacement": {
+    "enabled": true,
+    "train": true,
+    "num_classes": 40,
+    "phase": "spatial_only_full_ft_after_warmup",
+    "reason": "Start from the 40-class YouTube-VIS head warmup checkpoint and unfreeze all parameters for a single-frame full fine-tuning baseline."
+  },
+  "execution": {
+    "dry_run": true,
+    "epochs": 5,
+    "notes": "Set dry_run=false for single-frame spatial-only full fine-tuning."
+  },
+  "rtdetr": {
+    "variant": "rtdetrv2-s-r18vd",
+    "checkpoint": "outputs/runs/youtube_vis_rtdetr_temporal_head_only_medium_t1_offline_seed0_head_warmup_e5/best.pth",
+    "base_checkpoint": "weights/rtdetrv2_r18vd_120e_coco_rerun_48.1.pth",
+    "head_warmup_checkpoint": "outputs/runs/youtube_vis_rtdetr_temporal_head_only_medium_t1_offline_seed0_head_warmup_e5/best.pth",
+    "official_checkpoint_url": "https://github.com/lyuwenyu/storage/releases/download/v0.2/rtdetrv2_r18vd_120e_coco_rerun_48.1.pth",
+    "generated_config": "outputs/rtdetr_configs/youtube_vis_rtdetr_temporal_spatial_only_full_ft_medium_t1_offline_seed0_main_stable_e5.yml",
+    "clip_loader": {
+      "enabled": false,
+      "boundary": "clamp"
+    },
+    "dataset_export": {
+      "train_manifest": "outputs/splits/youtube_vis_pilot_train.jsonl",
+      "val_manifest": "outputs/splits/youtube_vis_pilot_dev.jsonl",
+      "output_root": "outputs/rtdetr_datasets/youtube_vis_pilot",
+      "image_mode": "hardlink"
+    },
+    "train_args": {
+      "epochs": 5,
+      "total_batch_size": 1,
+      "num_workers": 0,
+      "print_freq": 20,
+      "use_amp": true,
+      "use_ema": false,
+      "sync_bn": false,
+      "optimizer_lr": 1e-05,
+      "optimizer_weight_decay": 0.0001,
+      "optimizer_backbone_lr": 1e-06
+    }
+  },
+  "run_tag": "main_stable_e5"
+}

@@ -1,0 +1,7 @@
+model_family,tuning_mode,budget,clip,seeds,primary_metric,best_primary,final_primary,secondary_metric,best_secondary,final_secondary,best_epoch
+rtdetr_temporal,head_only,medium,T1_offline,"0,1,2",AP,0.324044 +/- 0.009745 (n=3),0.311723 +/- 0.009286 (n=3),AP50,0.408143 +/- 0.013293 (n=3),0.396385 +/- 0.014017 (n=3),3.333333 +/- 0.471405 (n=3)
+rtdetr_temporal,spatial_only_full_ft,medium,T1_offline,"0,1,2",AP,0.358509 +/- 0.016971 (n=3),0.324991 +/- 0.002232 (n=3),AP50,0.445047 +/- 0.022389 (n=3),0.388220 +/- 0.004000 (n=3),1.666667 +/- 0.471405 (n=3)
+rtdetr_temporal,spatial_temporal_peft,medium,T5_offline,"0,1,2",AP,0.338513 +/- 0.007537 (n=3),0.269317 +/- 0.009782 (n=3),AP50,0.420212 +/- 0.008433 (n=3),0.339427 +/- 0.016075 (n=3),1.000000 +/- 1.414214 (n=3)
+yolo_temporal,head_only,medium,T1_offline,"0,1,2",mAP50-95,0.396460 +/- 0.009417 (n=3),0.394353 +/- 0.012200 (n=3),mAP50,0.489933 +/- 0.009807 (n=3),0.488693 +/- 0.011119 (n=3),4.333333 +/- 0.942809 (n=3)
+yolo_temporal,spatial_only_full_ft,medium,T1_offline,"0,1,2",mAP50-95,0.392277 +/- 0.007702 (n=3),0.392277 +/- 0.007702 (n=3),mAP50,0.499410 +/- 0.004606 (n=3),0.499410 +/- 0.004606 (n=3),5.000000 +/- 0.000000 (n=3)
+yolo_temporal,spatial_temporal_peft,medium,T5_offline,"0,1,2",mAP50-95,0.398337 +/- 0.012122 (n=3),0.397137 +/- 0.011903 (n=3),mAP50,0.493427 +/- 0.016244 (n=3),0.492437 +/- 0.016327 (n=3),3.000000 +/- 1.414214 (n=3)

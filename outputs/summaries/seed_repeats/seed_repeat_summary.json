@@ -1,0 +1,544 @@
+{
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "runs": [
+    {
+      "experiment_id": "youtube_vis_yolo_temporal_head_only_medium_t1_offline_seed0_head_warmup_e5",
+      "run_dir": "outputs/runs/youtube_vis_yolo_temporal_head_only_medium_t1_offline_seed0_head_warmup_e5",
+      "model_family": "yolo_temporal",
+      "tuning_mode": "head_only",
+      "budget": "medium",
+      "seed": 0,
+      "clip": "T1_offline",
+      "primary_metric": "mAP50-95",
+      "secondary_metric": "mAP50",
+      "best_epoch": 5,
+      "best_primary": 0.39786,
+      "best_secondary": 0.48638,
+      "final_epoch": 5,
+      "final_primary": 0.39786,
+      "final_secondary": 0.48638,
+      "train_time_sec": 512.658
+    },
+    {
+      "experiment_id": "youtube_vis_rtdetr_temporal_head_only_medium_t1_offline_seed0_head_warmup_e5",
+      "run_dir": "outputs/runs/youtube_vis_rtdetr_temporal_head_only_medium_t1_offline_seed0_head_warmup_e5",
+      "model_family": "rtdetr_temporal",
+      "tuning_mode": "head_only",
+      "budget": "medium",
+      "seed": 0,
+      "clip": "T1_offline",
+      "primary_metric": "AP",
+      "secondary_metric": "AP50",
+      "best_epoch": 3,
+      "best_primary": 0.31180563662163835,
+      "best_secondary": 0.3894048348280784,
+      "final_epoch": 4,
+      "final_primary": 0.30712718767892583,
+      "final_secondary": 0.38630520252349565,
+      "train_time_sec": null
+    },
+    {
+      "experiment_id": "youtube_vis_yolo_temporal_head_only_medium_t1_offline_seed1_head_warmup_e5",
+      "run_dir": "outputs/runs/youtube_vis_yolo_temporal_head_only_medium_t1_offline_seed1_head_warmup_e5",
+      "model_family": "yolo_temporal",
+      "tuning_mode": "head_only",
+      "budget": "medium",
+      "seed": 1,
+      "clip": "T1_offline",
+      "primary_metric": "mAP50-95",
+      "secondary_metric": "mAP50",
+      "best_epoch": 5,
+      "best_primary": 0.40723,
+      "best_secondary": 0.50332,
+      "final_epoch": 5,
+      "final_primary": 0.40723,
+      "final_secondary": 0.50332,
+      "train_time_sec": 530.462
+    },
+    {
+      "experiment_id": "youtube_vis_rtdetr_temporal_head_only_medium_t1_offline_seed1_head_warmup_e5",
+      "run_dir": "outputs/runs/youtube_vis_rtdetr_temporal_head_only_medium_t1_offline_seed1_head_warmup_e5",
+      "model_family": "rtdetr_temporal",
+      "tuning_mode": "head_only",
+      "budget": "medium",
+      "seed": 1,
+      "clip": "T1_offline",
+      "primary_metric": "AP",
+      "secondary_metric": "AP50",
+      "best_epoch": 3,
+      "best_primary": 0.33565162716118385,
+      "best_secondary": 0.4188174526980616,
+      "final_epoch": 4,
+      "final_primary": 0.30336684544865344,
+      "final_secondary": 0.3866425678020332,
+      "train_time_sec": null
+    },
+    {
+      "experiment_id": "youtube_vis_yolo_temporal_head_only_medium_t1_offline_seed2_head_warmup_e5",
+      "run_dir": "outputs/runs/youtube_vis_yolo_temporal_head_only_medium_t1_offline_seed2_head_warmup_e5",
+      "model_family": "yolo_temporal",
+      "tuning_mode": "head_only",
+      "budget": "medium",
+      "seed": 2,
+      "clip": "T1_offline",
+      "primary_metric": "mAP50-95",
+      "secondary_metric": "mAP50",
+      "best_epoch": 3,
+      "best_primary": 0.38429,
+      "best_secondary": 0.4801,
+      "final_epoch": 5,
+      "final_primary": 0.37797,
+      "final_secondary": 0.47638,
+      "train_time_sec": 532.182
+    },
+    {
+      "experiment_id": "youtube_vis_rtdetr_temporal_head_only_medium_t1_offline_seed2_head_warmup_e5",
+      "run_dir": "outputs/runs/youtube_vis_rtdetr_temporal_head_only_medium_t1_offline_seed2_head_warmup_e5",
+      "model_family": "rtdetr_temporal",
+      "tuning_mode": "head_only",
+      "budget": "medium",
+      "seed": 2,
+      "clip": "T1_offline",
+      "primary_metric": "AP",
+      "secondary_metric": "AP50",
+      "best_epoch": 4,
+      "best_primary": 0.32467432336876195,
+      "best_secondary": 0.41620793486183655,
+      "final_epoch": 4,
+      "final_primary": 0.32467432336876195,
+      "final_secondary": 0.41620793486183655,
+      "train_time_sec": null
+    },
+    {
+      "experiment_id": "youtube_vis_yolo_temporal_spatial_only_full_ft_medium_t1_offline_seed0_main_stable_e5",
+      "run_dir": "outputs/runs/youtube_vis_yolo_temporal_spatial_only_full_ft_medium_t1_offline_seed0_main_stable_e5",
+      "model_family": "yolo_temporal",
+      "tuning_mode": "spatial_only_full_ft",
+      "budget": "medium",
+      "seed": 0,
+      "clip": "T1_offline",
+      "primary_metric": "mAP50-95",
+      "secondary_metric": "mAP50",
+      "best_epoch": 5,
+      "best_primary": 0.40216,
+      "best_secondary": 0.49834,
+      "final_epoch": 5,
+      "final_primary": 0.40216,
+      "final_secondary": 0.49834,
+      "train_time_sec": 1529.77
+    },
+    {
+      "experiment_id": "youtube_vis_yolo_temporal_spatial_temporal_peft_medium_t5_offline_seed0_main_stable_e5",
+      "run_dir": "outputs/runs/youtube_vis_yolo_temporal_spatial_temporal_peft_medium_t5_offline_seed0_main_stable_e5",
+      "model_family": "yolo_temporal",
+      "tuning_mode": "spatial_temporal_peft",
+      "budget": "medium",
+      "seed": 0,
+      "clip": "T5_offline",
+      "primary_metric": "mAP50-95",
+      "secondary_metric": "mAP50",
+      "best_epoch": 1,
+      "best_primary": 0.39768,
+      "best_secondary": 0.48724,
+      "final_epoch": 5,
+      "final_primary": 0.39539,
+      "final_secondary": 0.48503,
+      "train_time_sec": 1585.93
+    },
+    {
+      "experiment_id": "youtube_vis_rtdetr_temporal_spatial_only_full_ft_medium_t1_offline_seed0_main_stable_e5",
+      "run_dir": "outputs/runs/youtube_vis_rtdetr_temporal_spatial_only_full_ft_medium_t1_offline_seed0_main_stable_e5",
+      "model_family": "rtdetr_temporal",
+      "tuning_mode": "spatial_only_full_ft",
+      "budget": "medium",
+      "seed": 0,
+      "clip": "T1_offline",
+      "primary_metric": "AP",
+      "secondary_metric": "AP50",
+      "best_epoch": 2,
+      "best_primary": 0.3821242553382286,
+      "best_secondary": 0.4761882646829567,
+      "final_epoch": 4,
+      "final_primary": 0.32389391360579756,
+      "final_secondary": 0.3835396819277091,
+      "train_time_sec": null
+    },
+    {
+      "experiment_id": "youtube_vis_rtdetr_temporal_spatial_temporal_peft_medium_t5_offline_seed0_main_stable_e5",
+      "run_dir": "outputs/runs/youtube_vis_rtdetr_temporal_spatial_temporal_peft_medium_t5_offline_seed0_main_stable_e5",
+      "model_family": "rtdetr_temporal",
+      "tuning_mode": "spatial_temporal_peft",
+      "budget": "medium",
+      "seed": 0,
+      "clip": "T5_offline",
+      "primary_metric": "AP",
+      "secondary_metric": "AP50",
+      "best_epoch": 0,
+      "best_primary": 0.3286544101263102,
+      "best_secondary": 0.4088616884109743,
+      "final_epoch": 4,
+      "final_primary": 0.2649249556545136,
+      "final_secondary": 0.3314288080452203,
+      "train_time_sec": null
+    },
+    {
+      "experiment_id": "youtube_vis_yolo_temporal_spatial_only_full_ft_medium_t1_offline_seed1_main_stable_e5",
+      "run_dir": "outputs/runs/youtube_vis_yolo_temporal_spatial_only_full_ft_medium_t1_offline_seed1_main_stable_e5",
+      "model_family": "yolo_temporal",
+      "tuning_mode": "spatial_only_full_ft",
+      "budget": "medium",
+      "seed": 1,
+      "clip": "T1_offline",
+      "primary_metric": "mAP50-95",
+      "secondary_metric": "mAP50",
+      "best_epoch": 5,
+      "best_primary": 0.38337,
+      "best_secondary": 0.49438,
+      "final_epoch": 5,
+      "final_primary": 0.38337,
+      "final_secondary": 0.49438,
+      "train_time_sec": 1465.15
+    },
+    {
+      "experiment_id": "youtube_vis_yolo_temporal_spatial_temporal_peft_medium_t5_offline_seed1_main_stable_e5",
+      "run_dir": "outputs/runs/youtube_vis_yolo_temporal_spatial_temporal_peft_medium_t5_offline_seed1_main_stable_e5",
+      "model_family": "yolo_temporal",
+      "tuning_mode": "spatial_temporal_peft",
+      "budget": "medium",
+      "seed": 1,
+      "clip": "T5_offline",
+      "primary_metric": "mAP50-95",
+      "secondary_metric": "mAP50",
+      "best_epoch": 4,
+      "best_primary": 0.4135,
+      "best_secondary": 0.51568,
+      "final_epoch": 5,
+      "final_primary": 0.41251,
+      "final_secondary": 0.51508,
+      "train_time_sec": 1556.42
+    },
+    {
+      "experiment_id": "youtube_vis_rtdetr_temporal_spatial_only_full_ft_medium_t1_offline_seed1_main_stable_e5",
+      "run_dir": "outputs/runs/youtube_vis_rtdetr_temporal_spatial_only_full_ft_medium_t1_offline_seed1_main_stable_e5",
+      "model_family": "rtdetr_temporal",
+      "tuning_mode": "spatial_only_full_ft",
+      "budget": "medium",
+      "seed": 1,
+      "clip": "T1_offline",
+      "primary_metric": "AP",
+      "secondary_metric": "AP50",
+      "best_epoch": 2,
+      "best_primary": 0.34299140183311166,
+      "best_secondary": 0.42451820622794223,
+      "final_epoch": 4,
+      "final_primary": 0.32297611904037954,
+      "final_secondary": 0.38780687016011056,
+      "train_time_sec": null
+    },
+    {
+      "experiment_id": "youtube_vis_rtdetr_temporal_spatial_temporal_peft_medium_t5_offline_seed1_main_stable_e5",
+      "run_dir": "outputs/runs/youtube_vis_rtdetr_temporal_spatial_temporal_peft_medium_t5_offline_seed1_main_stable_e5",
+      "model_family": "rtdetr_temporal",
+      "tuning_mode": "spatial_temporal_peft",
+      "budget": "medium",
+      "seed": 1,
+      "clip": "T5_offline",
+      "primary_metric": "AP",
+      "secondary_metric": "AP50",
+      "best_epoch": 3,
+      "best_primary": 0.3399353231080835,
+      "best_secondary": 0.42271819563180224,
+      "final_epoch": 4,
+      "final_primary": 0.2828741240620594,
+      "final_secondary": 0.36185514657804124,
+      "train_time_sec": null
+    },
+    {
+      "experiment_id": "youtube_vis_yolo_temporal_spatial_only_full_ft_medium_t1_offline_seed2_main_stable_e5",
+      "run_dir": "outputs/runs/youtube_vis_yolo_temporal_spatial_only_full_ft_medium_t1_offline_seed2_main_stable_e5",
+      "model_family": "yolo_temporal",
+      "tuning_mode": "spatial_only_full_ft",
+      "budget": "medium",
+      "seed": 2,
+      "clip": "T1_offline",
+      "primary_metric": "mAP50-95",
+      "secondary_metric": "mAP50",
+      "best_epoch": 5,
+      "best_primary": 0.3913,
+      "best_secondary": 0.50551,
+      "final_epoch": 5,
+      "final_primary": 0.3913,
+      "final_secondary": 0.50551,
+      "train_time_sec": 1389.9
+    },
+    {
+      "experiment_id": "youtube_vis_yolo_temporal_spatial_temporal_peft_medium_t5_offline_seed2_main_stable_e5",
+      "run_dir": "outputs/runs/youtube_vis_yolo_temporal_spatial_temporal_peft_medium_t5_offline_seed2_main_stable_e5",
+      "model_family": "yolo_temporal",
+      "tuning_mode": "spatial_temporal_peft",
+      "budget": "medium",
+      "seed": 2,
+      "clip": "T5_offline",
+      "primary_metric": "mAP50-95",
+      "secondary_metric": "mAP50",
+      "best_epoch": 4,
+      "best_primary": 0.38383,
+      "best_secondary": 0.47736,
+      "final_epoch": 5,
+      "final_primary": 0.38351,
+      "final_secondary": 0.4772,
+      "train_time_sec": 1494.21
+    },
+    {
+      "experiment_id": "youtube_vis_rtdetr_temporal_spatial_only_full_ft_medium_t1_offline_seed2_main_stable_e5",
+      "run_dir": "outputs/runs/youtube_vis_rtdetr_temporal_spatial_only_full_ft_medium_t1_offline_seed2_main_stable_e5",
+      "model_family": "rtdetr_temporal",
+      "tuning_mode": "spatial_only_full_ft",
+      "budget": "medium",
+      "seed": 2,
+      "clip": "T1_offline",
+      "primary_metric": "AP",
+      "secondary_metric": "AP50",
+      "best_epoch": 1,
+      "best_primary": 0.3504103110132865,
+      "best_secondary": 0.43443478723658435,
+      "final_epoch": 4,
+      "final_primary": 0.32810208633962984,
+      "final_secondary": 0.39331196078839303,
+      "train_time_sec": null
+    },
+    {
+      "experiment_id": "youtube_vis_rtdetr_temporal_spatial_temporal_peft_medium_t5_offline_seed2_main_stable_e5",
+      "run_dir": "outputs/runs/youtube_vis_rtdetr_temporal_spatial_temporal_peft_medium_t5_offline_seed2_main_stable_e5",
+      "model_family": "rtdetr_temporal",
+      "tuning_mode": "spatial_temporal_peft",
+      "budget": "medium",
+      "seed": 2,
+      "clip": "T5_offline",
+      "primary_metric": "AP",
+      "secondary_metric": "AP50",
+      "best_epoch": 0,
+      "best_primary": 0.34695044843840533,
+      "best_secondary": 0.42905579807312677,
+      "final_epoch": 4,
+      "final_primary": 0.26015170551627664,
+      "final_secondary": 0.3249981117246775,
+      "train_time_sec": null
+    }
+  ],
+  "summary": [
+    {
+      "model_family": "rtdetr_temporal",
+      "tuning_mode": "head_only",
+      "budget": "medium",
+      "clip": "T1_offline",
+      "seeds": "0,1,2",
+      "primary_metric": "AP",
+      "secondary_metric": "AP50",
+      "best_primary": {
+        "mean": 0.3240438623838614,
+        "std": 0.009745286963215766,
+        "n": 3
+      },
+      "final_primary": {
+        "mean": 0.3117227854987804,
+        "std": 0.009285895875658848,
+        "n": 3
+      },
+      "best_secondary": {
+        "mean": 0.40814340746265887,
+        "std": 0.013292929802981211,
+        "n": 3
+      },
+      "final_secondary": {
+        "mean": 0.39638523506245515,
+        "std": 0.014017442095120578,
+        "n": 3
+      },
+      "best_epoch": {
+        "mean": 3.3333333333333335,
+        "std": 0.4714045207910317,
+        "n": 3
+      }
+    },
+    {
+      "model_family": "rtdetr_temporal",
+      "tuning_mode": "spatial_only_full_ft",
+      "budget": "medium",
+      "clip": "T1_offline",
+      "seeds": "0,1,2",
+      "primary_metric": "AP",
+      "secondary_metric": "AP50",
+      "best_primary": {
+        "mean": 0.35850865606154225,
+        "std": 0.016971200119686912,
+        "n": 3
+      },
+      "final_primary": {
+        "mean": 0.32499070632860233,
+        "std": 0.002231755795458508,
+        "n": 3
+      },
+      "best_secondary": {
+        "mean": 0.4450470860491611,
+        "std": 0.022389199773577097,
+        "n": 3
+      },
+      "final_secondary": {
+        "mean": 0.3882195042920709,
+        "std": 0.004000171556978236,
+        "n": 3
+      },
+      "best_epoch": {
+        "mean": 1.6666666666666667,
+        "std": 0.4714045207910317,
+        "n": 3
+      }
+    },
+    {
+      "model_family": "rtdetr_temporal",
+      "tuning_mode": "spatial_temporal_peft",
+      "budget": "medium",
+      "clip": "T5_offline",
+      "seeds": "0,1,2",
+      "primary_metric": "AP",
+      "secondary_metric": "AP50",
+      "best_primary": {
+        "mean": 0.338513393890933,
+        "std": 0.007536695407730233,
+        "n": 3
+      },
+      "final_primary": {
+        "mean": 0.2693169284109499,
+        "std": 0.009782438164465682,
+        "n": 3
+      },
+      "best_secondary": {
+        "mean": 0.42021189403863446,
+        "std": 0.008432543191655229,
+        "n": 3
+      },
+      "final_secondary": {
+        "mean": 0.339427355449313,
+        "std": 0.01607467625339426,
+        "n": 3
+      },
+      "best_epoch": {
+        "mean": 1.0,
+        "std": 1.4142135623730951,
+        "n": 3
+      }
+    },
+    {
+      "model_family": "yolo_temporal",
+      "tuning_mode": "head_only",
+      "budget": "medium",
+      "clip": "T1_offline",
+      "seeds": "0,1,2",
+      "primary_metric": "mAP50-95",
+      "secondary_metric": "mAP50",
+      "best_primary": {
+        "mean": 0.39646,
+        "std": 0.009417391712500141,
+        "n": 3
+      },
+      "final_primary": {
+        "mean": 0.39435333333333333,
+        "std": 0.01219998451729437,
+        "n": 3
+      },
+      "best_secondary": {
+        "mean": 0.48993333333333333,
+        "std": 0.00980685927751024,
+        "n": 3
+      },
+      "final_secondary": {
+        "mean": 0.4886933333333333,
+        "std": 0.011119188619479178,
+        "n": 3
+      },
+      "best_epoch": {
+        "mean": 4.333333333333333,
+        "std": 0.9428090415820634,
+        "n": 3
+      }
+    },
+    {
+      "model_family": "yolo_temporal",
+      "tuning_mode": "spatial_only_full_ft",
+      "budget": "medium",
+      "clip": "T1_offline",
+      "seeds": "0,1,2",
+      "primary_metric": "mAP50-95",
+      "secondary_metric": "mAP50",
+      "best_primary": {
+        "mean": 0.39227666666666666,
+        "std": 0.00770200983870806,
+        "n": 3
+      },
+      "final_primary": {
+        "mean": 0.39227666666666666,
+        "std": 0.00770200983870806,
+        "n": 3
+      },
+      "best_secondary": {
+        "mean": 0.49941,
+        "std": 0.004606365161382682,
+        "n": 3
+      },
+      "final_secondary": {
+        "mean": 0.49941,
+        "std": 0.004606365161382682,
+        "n": 3
+      },
+      "best_epoch": {
+        "mean": 5.0,
+        "std": 0.0,
+        "n": 3
+      }
+    },
+    {
+      "model_family": "yolo_temporal",
+      "tuning_mode": "spatial_temporal_peft",
+      "budget": "medium",
+      "clip": "T5_offline",
+      "seeds": "0,1,2",
+      "primary_metric": "mAP50-95",
+      "secondary_metric": "mAP50",
+      "best_primary": {
+        "mean": 0.39833666666666667,
+        "std": 0.012121623470292884,
+        "n": 3
+      },
+      "final_primary": {
+        "mean": 0.3971366666666667,
+        "std": 0.011903448613275422,
+        "n": 3
+      },
+      "best_secondary": {
+        "mean": 0.4934266666666667,
+        "std": 0.016244214012653527,
+        "n": 3
+      },
+      "final_secondary": {
+        "mean": 0.4924366666666667,
+        "std": 0.0163272294717206,
+        "n": 3
+      },
+      "best_epoch": {
+        "mean": 3.0,
+        "std": 1.4142135623730951,
+        "n": 3
+      }
+    }
+  ],
+  "notes": {
+    "missing_rows": 0,
+    "head_only_source": "seed-specific head warmup run",
+    "budget_clip_sweeps": "not included by default"
+  }
+}

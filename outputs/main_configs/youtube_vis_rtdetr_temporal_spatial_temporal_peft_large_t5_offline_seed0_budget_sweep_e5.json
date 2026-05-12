@@ -1,0 +1,78 @@
+{
+  "model_family": "rtdetr_temporal",
+  "dataset": {
+    "name": "youtube_vis",
+    "num_classes": 40
+  },
+  "tuning_mode": "spatial_temporal_peft",
+  "budget": "large",
+  "seed": 0,
+  "clip": {
+    "length": 5,
+    "causal": false,
+    "target": "center"
+  },
+  "paths": {
+    "youtube_vis_root": "data/VIS2021",
+    "outputs_root": "outputs",
+    "rtdetr_repo": "third_party/RT-DETR"
+  },
+  "head_replacement": {
+    "enabled": true,
+    "train": false,
+    "num_classes": 40,
+    "phase": "frozen_after_warmup",
+    "reason": "Use the 40-class YouTube-VIS head warmup checkpoint, then freeze the head during PEFT."
+  },
+  "execution": {
+    "dry_run": true,
+    "epochs": 5,
+    "notes": "Set dry_run=false after the head warmup checkpoint exists. T>1 uses target-frame clip batches."
+  },
+  "rtdetr": {
+    "variant": "rtdetrv2-s-r18vd",
+    "checkpoint": "outputs/runs/youtube_vis_rtdetr_temporal_head_only_medium_t1_offline_seed0_head_warmup_e5/best.pth",
+    "base_checkpoint": "weights/rtdetrv2_r18vd_120e_coco_rerun_48.1.pth",
+    "head_warmup_checkpoint": "outputs/runs/youtube_vis_rtdetr_temporal_head_only_medium_t1_offline_seed0_head_warmup_e5/best.pth",
+    "official_checkpoint_url": "https://github.com/lyuwenyu/storage/releases/download/v0.2/rtdetrv2_r18vd_120e_coco_rerun_48.1.pth",
+    "generated_config": "outputs/rtdetr_configs/youtube_vis_rtdetr_temporal_spatial_temporal_peft_large_t5_offline_seed0_budget_sweep_e5.yml",
+    "adapter": {
+      "feature_level": "P4",
+      "feature_index": 1,
+      "channels": 256,
+      "adapter_dim": 16,
+      "kernel_size": 3,
+      "residual_scale": 0.1,
+      "placement": "HybridEncoder output"
+    },
+    "lora": {
+      "rank": 16,
+      "alpha": 16.0,
+      "targets": "encoder.0.layers.0.linear1,encoder.0.layers.0.linear2",
+      "notes": "Medium budget starts from RT-DETR HybridEncoder FFN LoRA rank 8 plus a reduced P4 temporal adapter."
+    },
+    "clip_loader": {
+      "enabled": true,
+      "boundary": "clamp",
+      "notes": "Clip loader flattens B clips to B*T images and keeps labels on target frames."
+    },
+    "dataset_export": {
+      "train_manifest": "outputs/splits/youtube_vis_pilot_train.jsonl",
+      "val_manifest": "outputs/splits/youtube_vis_pilot_dev.jsonl",
+      "output_root": "outputs/rtdetr_datasets/youtube_vis_pilot",
+      "image_mode": "hardlink"
+    },
+    "train_args": {
+      "epochs": 5,
+      "total_batch_size": 1,
+      "num_workers": 0,
+      "print_freq": 20,
+      "use_amp": true,
+      "use_ema": false,
+      "sync_bn": false,
+      "optimizer_lr": 1e-05,
+      "optimizer_weight_decay": 0.0001
+    }
+  },
+  "run_tag": "budget_sweep_e5"
+}

@@ -1,0 +1,46 @@
+{
+  "model_family": "yolo_temporal",
+  "dataset": {
+    "name": "youtube_vis",
+    "num_classes": 40
+  },
+  "tuning_mode": "head_only",
+  "budget": "medium",
+  "seed": 1,
+  "run_tag": "head_warmup_e5",
+  "clip": {
+    "length": 1,
+    "causal": false,
+    "target": "center"
+  },
+  "paths": {
+    "youtube_vis_root": "data/VIS2021",
+    "outputs_root": "outputs",
+    "ultralytics_repo": "third_party/ultralytics"
+  },
+  "head_replacement": {
+    "enabled": true,
+    "train": true,
+    "num_classes": 40,
+    "phase": "warmup",
+    "reason": "Create a 40-class YouTube-VIS head-adapted checkpoint before PEFT."
+  },
+  "execution": {
+    "dry_run": true,
+    "epochs": 5,
+    "notes": "Set dry_run=false in the notebook kernel to run the actual head warmup before PEFT."
+  },
+  "yolo": {
+    "weights": "yolov8m.pt",
+    "train_args": {
+      "data": "outputs/yolo_datasets/youtube_vis_pilot/data.yaml",
+      "epochs": 5,
+      "imgsz": 640,
+      "batch": 4,
+      "workers": 0,
+      "freeze": 22,
+      "plots": false,
+      "val": true
+    }
+  }
+}
