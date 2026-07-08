@@ -17,7 +17,7 @@ RT-DETRv2-S/R18VD과 YOLOv8m를 YouTube-VIS detection 변환 데이터에서 비
 
 Main comparison은 seed `0, 1, 2` 반복 평균으로 수행합니다.
 
-| 조건 | 의미 | clip | 비고 |
+| 조건 | 의미 | Clip | 비고 |
 |---|---|---:|---|
 | `head_only` | COCO pretrained에서 YouTube-VIS 40-class head warmup | T=1 | Prerequisite/reference |
 | `spatial_only_full_ft` | Head warmup checkpoint에서 Temporal 없이 전체 Fine-tuning | T=1 | Strong spatial baseline |
